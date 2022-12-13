@@ -16,8 +16,9 @@ public class Obrot implements Transformacja {
 
   @Override
   public Punkt transformuj(Punkt p) {
-    double transformedX = (p.getX() * cos(alfa)) - (p.getY() * sin(alfa));
-    double transformedY = (p.getX() * sin(alfa)) + (p.getY() * cos(alfa));
+    double alfaR = (alfa * PI) / 180.0;
+    double transformedX = (p.getX() * cos(alfaR)) - (p.getY() * sin(alfaR));
+    double transformedY = (p.getX() * sin(alfaR)) + (p.getY() * cos(alfaR));
     return new Punkt(transformedX, transformedY);
   }
 

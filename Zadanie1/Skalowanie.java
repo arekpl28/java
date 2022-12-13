@@ -29,7 +29,7 @@ public class Skalowanie implements Transformacja {
 
   @Override
   public Punkt transformuj(Punkt p) {
-    return new Punkt(skalaX * p.getX(), skalaY * p.getX());
+    return new Punkt(skalaX * p.getX(), skalaY * p.getY());
   }
 
   public double getSkalaX() {

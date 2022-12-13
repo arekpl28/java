@@ -37,7 +37,8 @@ public class Punkt {
      * TODO
      */
     if (obj instanceof Punkt) {
-      return (this.x == ((Punkt) obj).x) && (this.y == ((Punkt) obj).y);
+      Punkt other = (Punkt) obj;
+      return (this.x == other.x && (this.y == other.y));
     }
     return false;
   }

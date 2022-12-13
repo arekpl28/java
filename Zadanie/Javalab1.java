@@ -8,8 +8,9 @@ public class Javalab1 {
     System.out.println("Drukowanie całego obiektu:");
     System.out.println(b);
     b.setLiczba(3.14);
-    System.out.println("Drukowanie całego obiektu po ustawieniu liczby: ");
+    System.out.println("Drukowanie całego obiektu po ustawieniu liczby:");
     System.out.println(b);
+
     B b1 = new B(3.14);
     System.out.println("Porównywanie referencji: b == b");
     System.out.println(b == b);
