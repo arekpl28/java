@@ -37,8 +37,7 @@ public class Punkt {
      * TODO
      */
     if (obj instanceof Punkt) {
-      Punkt other = (Punkt) obj;
-      return x == other.x;
+      return (this.x == ((Punkt) obj).x) && (this.y == ((Punkt) obj).y);
     }
     return false;
   }
@@ -48,7 +47,7 @@ public class Punkt {
     /*
      * TODO
      */
-    return 59 * Double.hashCode(x) + 7;
+    return Integer.hashCode((int) (100 * x + y));
   }
 
   @Override
@@ -56,7 +55,7 @@ public class Punkt {
     /*
      * TODO
      */
-    return "Instancja klasy Punkt zawierająca liczby: " + x + ", " + y;
+    return "Punkt (" + x + ", " + y + ")";
   }
 
   /*
