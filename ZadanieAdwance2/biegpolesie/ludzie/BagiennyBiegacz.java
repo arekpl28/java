@@ -35,9 +35,9 @@ public class BagiennyBiegacz extends Czlowiek {
         if (DziedzinaZadania.NAUKI_LESNE.equals(dziedzinaZadania)) {
             wypowiedzSie(
                     "Generalnie dobrze się idzie. Tylko trzeba stopy stawiać na tym bardziej suchym, twardszym mchu.");
-            return true; // Od 0.2 do 0.4
+            return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie
         } else
-            return false;
+            return rozwiazanieZadaniaCzlowiek(0.1);
     }
 
 }
