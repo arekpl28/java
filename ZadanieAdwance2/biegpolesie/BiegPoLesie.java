@@ -29,6 +29,7 @@ public class BiegPoLesie {
     }
 
     public void dodajElementTrasy(ElementTrasy e) {
+        System.out.println(e);
         elementyTrasy.add(e);
     }
 
@@ -108,6 +109,23 @@ public class BiegPoLesie {
                 }
                 liczbaUczestnikow++;
             }
+        }
+        if (et instanceof Zadanie) {
+            Zadanie z = (Zadanie) et;
+            for (Uczestnik u : z.getUczestnicy()) {
+                komentator.relacjonuj(indeksElementuTrasy + 1, u, z.getDziedzinaZadania());
+                boolean zrobione = u.rozwiazZadanie(z.getDziedzinaZadania());
+
+                double dotychczasowyPostep = z.getUczestnicyWTerenie().get(u);
+                if (!zrobione) {
+
+                    dotychczasowyPostep -= 0.1;
+                    z.getUczestnicyWTerenie().put(u, dotychczasowyPostep);
+                }
+
+                // liczbaUczestnikow++;
+            }
+
         }
 
         for (Uczestnik u : doUsuniecia) {

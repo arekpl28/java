@@ -3,7 +3,7 @@ package ZadanieAdwance2.biegpolesie;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Zadanie implements ElementTrasy {
+class Zadanie implements ElementTrasy {
 
   private final DziedzinaZadania dziedzinaZadania;
   private Map<Uczestnik, Double> uczestnicyWTerenie = new HashMap<>();

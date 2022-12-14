@@ -7,7 +7,7 @@ import java.util.Map;
  *
  * @author TB
  */
-public class Teren implements ElementTrasy {
+class Teren implements ElementTrasy {
 
     private final RodzajTerenu rodzajTerenu;
     private Map<Uczestnik, Double> uczestnicyWTerenie = new HashMap<>();

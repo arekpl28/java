@@ -91,6 +91,13 @@ class Komentator {
                 + " trasy");
     }
 
+    public void relacjonuj(int nrElementu, Uczestnik u, DziedzinaZadania dz) {
+        String slowo_uczestnik = odmienUczestnik(u);
+        slowo_uczestnik = slowo_uczestnik.substring(0, 1).toUpperCase() + slowo_uczestnik.substring(1);
+        mow(slowo_uczestnik + " " + u + " Wykonuje zadanie z dziedziny: " + dz + ". Element nr " + nrElementu
+                + "na trasy\n");
+    }
+
     private String odmienUczestnik(Uczestnik u) {
         String slowo_uczestnik = "uczestnik";
         if (u instanceof Czlowiek && Czlowiek.Plec.KOBIETA.equals(((Czlowiek) u).getPlec()))
