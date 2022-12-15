@@ -96,21 +96,21 @@ public abstract class Czlowiek implements Uczestnik {
     public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
         switch (dziedzinaZadania) {
             case MATEMATYKA:
-                wypowiedzSie("Wykryto zadanie: " + dziedzinaZadania + ". xxxxxxxxxx.");
+                wypowiedzSie("Rozwiązuje zadanie z: " + dziedzinaZadania + ". Damy sobie radę, chyba:-)?.");
                 return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie zadania
             case FIZYKA:
-                wypowiedzSie("Wykryto zadanie: " + dziedzinaZadania + ". yyyyyyyyy.");
+                wypowiedzSie("Rozwiązuje zadanie z: " + dziedzinaZadania + ". Może uda się zrobić.");
                 return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie zadania
             case INFORMATYKA:
-                wypowiedzSie("Wykryto zadanie: " + dziedzinaZadania + ". tttttttttt.");
+                wypowiedzSie("Rozwiązuje zadanie z: " + dziedzinaZadania + ". Powinno nyć OK.");
                 return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie zadania
             case SZTUKA:
-                wypowiedzSie("Wykryto zadanie: " + dziedzinaZadania + ". zzzzzzzzzzzzz.");
+                wypowiedzSie("Rozwiązuje zadanie z: " + dziedzinaZadania + ". Coś trudnego.");
                 return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie zadania
             case NAUKI_LESNE:
             default:
-                wypowiedzSie("Wykryto zadanie: " + dziedzinaZadania + ".");
-                wypowiedzSie("Awaria silników!");
+                wypowiedzSie("Rozwiązuje zadanie z: " + dziedzinaZadania + ".");
+                wypowiedzSie("Nie będzie łatwo!");
                 return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie zadania
         }
     }

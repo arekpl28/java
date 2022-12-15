@@ -34,8 +34,8 @@ public class BagiennyBiegacz extends Czlowiek {
     public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
         if (DziedzinaZadania.NAUKI_LESNE.equals(dziedzinaZadania)) {
             wypowiedzSie(
-                    "Generalnie dobrze się idzie. Tylko trzeba stopy stawiać na tym bardziej suchym, twardszym mchu.");
-            return rozwiazanieZadaniaCzlowiek(0.1); // 10% szansy na rozwiązanie
+                    "Całkiem dobrze mi to idzie.");
+            return rozwiazanieZadaniaCzlowiek(0.6); // 60% szansy na rozwiązanie
         } else
             return rozwiazanieZadaniaCzlowiek(0.1);
     }

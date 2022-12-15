@@ -81,7 +81,7 @@ class Komentator {
     }
 
     void powiadomONowejTurze(int licznikTur) {
-        mow("Mamy teraz turę nr: " + licznikTur);
+        mow("Mamy teraz turę nr: " + licznikTur + "\n");
     }
 
     public void relacjonuj(int nrElementu, Uczestnik u, RodzajTerenu rt) {
@@ -91,11 +91,17 @@ class Komentator {
                 + " trasy");
     }
 
-    public void relacjonuj(int nrElementu, Uczestnik u, DziedzinaZadania dz) {
+    public void relacjonuj(int nrElementu, Uczestnik u, DziedzinaZadania dz, boolean zr) {
         String slowo_uczestnik = odmienUczestnik(u);
         slowo_uczestnik = slowo_uczestnik.substring(0, 1).toUpperCase() + slowo_uczestnik.substring(1);
-        mow(slowo_uczestnik + " " + u + " Wykonuje zadanie z dziedziny: " + dz + ". Element nr " + nrElementu
-                + "na trasy\n");
+        mow(slowo_uczestnik + " " + u + " wykonuje zadanie z dziedziny: " + dz + ". Element nr " + nrElementu
+                + " trasy");
+        if (zr) {
+            mow("Wykonał zadanie. Gratulacje!!!");
+        } else {
+            mow("Niestety nie udało się wykonać zadania.");
+
+        }
     }
 
     private String odmienUczestnik(Uczestnik u) {

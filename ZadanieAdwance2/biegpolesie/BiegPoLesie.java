@@ -29,7 +29,6 @@ public class BiegPoLesie {
     }
 
     public void dodajElementTrasy(ElementTrasy e) {
-        System.out.println(e);
         elementyTrasy.add(e);
     }
 
@@ -113,17 +112,20 @@ public class BiegPoLesie {
         if (et instanceof Zadanie) {
             Zadanie z = (Zadanie) et;
             for (Uczestnik u : z.getUczestnicy()) {
-                komentator.relacjonuj(indeksElementuTrasy + 1, u, z.getDziedzinaZadania());
                 boolean zrobione = u.rozwiazZadanie(z.getDziedzinaZadania());
-
+                komentator.relacjonuj(indeksElementuTrasy + 1, u, z.getDziedzinaZadania(), zrobione);
                 double dotychczasowyPostep = z.getUczestnicyWTerenie().get(u);
-                if (!zrobione) {
-
-                    dotychczasowyPostep -= 0.1;
-                    z.getUczestnicyWTerenie().put(u, dotychczasowyPostep);
+                if (zrobione) {
+                    dotychczasowyPostep = 1.0;
                 }
 
-                // liczbaUczestnikow++;
+                if (dotychczasowyPostep < 1.0)
+                    z.getUczestnicyWTerenie().put(u, dotychczasowyPostep);
+                else {
+                    doUsuniecia.add(u);
+                    umiescUczestnikaWElemencieTrasy(u, indeksElementuTrasy + 1);
+                }
+                liczbaUczestnikow++;
             }
 
         }

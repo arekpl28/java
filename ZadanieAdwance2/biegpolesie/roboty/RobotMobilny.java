@@ -41,20 +41,20 @@ public class RobotMobilny extends Robot {
     public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
         switch (dziedzinaZadania) {
             case MATEMATYKA:
-                komunikuj("Wykryto teren: " + dziedzinaZadania + ". Rozwijanie maksymalnej prędkości.");
+                komunikuj("Wykryto zadanie z: " + dziedzinaZadania + ". Bardzo słabo sobie z tym radzę.");
                 return rozwiazanieZadaniaRobot(0.05); // 5% szansy na rozwiązanie zadania
             case FIZYKA:
-                komunikuj("Wykryto teren: " + dziedzinaZadania + ". Prędkość umiarkowana.");
+                komunikuj("Wykryto zadanie z: " + dziedzinaZadania + ". Będzie ciężko.");
                 return rozwiazanieZadaniaRobot(0.05); // 5% szansy na rozwiązanie zadania
             case INFORMATYKA:
-                komunikuj("Wykryto teren: " + dziedzinaZadania + ". Nieprzyjazne warunki.");
+                komunikuj("Wykryto zadanie z: " + dziedzinaZadania + ". Przegrzanie stytemu.");
                 return rozwiazanieZadaniaRobot(0.05); // 5% szansy na rozwiązanie zadania
             case SZTUKA:
-                komunikuj("Wykryto teren: " + dziedzinaZadania + ". Wykryto znaczną liczbę przeszkód.");
+                komunikuj("Wykryto zadanie z: " + dziedzinaZadania + ". Masakra.");
                 return rozwiazanieZadaniaRobot(0.05); // 5% szansy na rozwiązanie zadania
             case NAUKI_LESNE:
             default:
-                komunikuj("Wykryto teren: " + dziedzinaZadania + ".");
+                komunikuj("Wykryto zadanie z: " + dziedzinaZadania + ".");
                 komunikuj("Awaria silników!");
                 return rozwiazanieZadaniaRobot(0.05); // 5% szansy na rozwiązanie zadania
         }

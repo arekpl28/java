@@ -22,7 +22,7 @@ public class TerminatorL extends Terminator {
   public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
     if (DziedzinaZadania.NAUKI_LESNE.equals(dziedzinaZadania)) {
       komunikuj(
-          "Zadania z Fizyki rozwiązuję raz dobrze a raz źle :-)");
+          "Zadania z Fizyki rozwiązuję przewaznie dobrze :-)");
       return rozwiazanieZadaniaRobot(0.7); // 70% szansy na rozwiązanie
     } else
       return rozwiazanieZadaniaRobot(0.1);

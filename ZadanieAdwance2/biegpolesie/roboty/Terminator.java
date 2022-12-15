@@ -19,22 +19,22 @@ public class Terminator extends Robot {
   public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
     switch (dziedzinaZadania) {
       case MATEMATYKA:
-        komunikuj("Wykryto teren: " + dziedzinaZadania + ". Rozwijanie maksymalnej prędkości.");
+        komunikuj("Wykryto zadanie z:  " + dziedzinaZadania + ". Prościzna");
         return rozwiazanieZadaniaRobot(1); // 100% szansy na rozwiązanie zadania
       case FIZYKA:
-        komunikuj("Wykryto teren: " + dziedzinaZadania + ". Prędkość umiarkowana.");
+        komunikuj("Wykryto zadanie z:  " + dziedzinaZadania + ". Dla mnie to Pestka");
         return rozwiazanieZadaniaRobot(1); // 100% szansy na rozwiązanie zadania
       case INFORMATYKA:
-        komunikuj("Wykryto teren: " + dziedzinaZadania + ". Nieprzyjazne warunki.");
+        komunikuj("Wykryto zadanie z:  " + dziedzinaZadania + ". Luzik.");
         return rozwiazanieZadaniaRobot(1); // 100% szansy na rozwiązanie zadania
       case SZTUKA:
-        komunikuj("Wykryto teren: " + dziedzinaZadania + ". Wykryto znaczną liczbę przeszkód.");
-        return rozwiazanieZadaniaRobot(0); // 0% szansy na rozwiązanie zadania
+        komunikuj("Wykryto zadanie z:  " + dziedzinaZadania + ". Będzie problem.");
+        return rozwiazanieZadaniaRobot(0.1); // 10% szansy na rozwiązanie zadania
       case NAUKI_LESNE:
       default:
-        komunikuj("Wykryto teren: " + dziedzinaZadania + ".");
-        komunikuj("Awaria silników!");
-        return rozwiazanieZadaniaRobot(0); // 0% szansy na rozwiązanie zadania
+        komunikuj("Wykryto zadanie z:  " + dziedzinaZadania + ".");
+        komunikuj("Zwarcie w obwodzie!!");
+        return rozwiazanieZadaniaRobot(0.1); // 10% szansy na rozwiązanie zadania
     }
   }
 
