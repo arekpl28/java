@@ -97,7 +97,7 @@ class Komentator {
         mow(slowo_uczestnik + " " + u + " wykonuje zadanie z dziedziny: " + dz + ". Element nr " + nrElementu
                 + " trasy");
         if (zr) {
-            mow("Wykonał zadanie. Gratulacje!!!");
+            mow("Gratulacje. Udało Ci się wykonać zadanie!!!!");
         } else {
             mow("Niestety nie udało się wykonać zadania.");
 

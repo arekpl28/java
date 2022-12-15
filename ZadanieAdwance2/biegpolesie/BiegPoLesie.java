@@ -109,19 +109,14 @@ public class BiegPoLesie {
                 liczbaUczestnikow++;
             }
         }
+
         if (et instanceof Zadanie) {
             Zadanie z = (Zadanie) et;
             for (Uczestnik u : z.getUczestnicy()) {
                 boolean zrobione = u.rozwiazZadanie(z.getDziedzinaZadania());
                 komentator.relacjonuj(indeksElementuTrasy + 1, u, z.getDziedzinaZadania(), zrobione);
-                double dotychczasowyPostep = z.getUczestnicyWTerenie().get(u);
-                if (zrobione) {
-                    dotychczasowyPostep = 1.0;
-                }
 
-                if (dotychczasowyPostep < 1.0)
-                    z.getUczestnicyWTerenie().put(u, dotychczasowyPostep);
-                else {
+                if (zrobione) {
                     doUsuniecia.add(u);
                     umiescUczestnikaWElemencieTrasy(u, indeksElementuTrasy + 1);
                 }

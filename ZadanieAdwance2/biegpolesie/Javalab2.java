@@ -6,7 +6,6 @@ import java.util.Scanner;
 import java.util.Set;
 
 import ZadanieAdwance2.biegpolesie.ludzie.BagiennyBiegacz;
-import ZadanieAdwance2.biegpolesie.ludzie.Student;
 import ZadanieAdwance2.biegpolesie.ludzie.StudentWETIOrazLesnik;
 import ZadanieAdwance2.biegpolesie.roboty.RobotMobilny;
 
